@@ -1,19 +1,16 @@
 extends Control
 
 @onready var campoDeEntrada = $LineEdit
+@onready var campo1View = $Campo1
+@onready var campo2View = $Campo2
+@onready var OperacaoView = $Operacao
 
 func _ready() -> void:
 	cacularResultadoEsperado()
 	pass
 	
 func _process(delta: float) -> void:
-	#enterPressionado()
 	calcularAcerto()
-
-	
-func enterPressionado():
-	if Input.is_action_just_pressed("enter"):
-		calcularAcerto()
 
 
 func retornarQuantidadeCasaMax(value):
@@ -46,6 +43,8 @@ func cacularResultadoEsperado():
 	var numero1 = randi_range(numeroMin1, numeroMax1)
 	var numero2 = randi_range(numeroMin2, numeroMax2)
 	
+	atualizarVisual(numero1, numero2)
+	
 	if (Dados.operacaoID == 0):
 		resultado = numero1 + numero2
 		
@@ -63,3 +62,11 @@ func calcularAcerto():
 			cacularResultadoEsperado()
 		
 		campoDeEntrada.grab_focus()
+
+func atualizarVisual(numero1, numero2):
+	campo1View.text = str(numero1)
+	campo2View.text = str(numero2)
+	
+	if (Dados.operacaoID == 0):
+		OperacaoView.text = "+"
+	
