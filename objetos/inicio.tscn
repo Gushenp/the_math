@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://vymnb2htmjvj"]
+
+[ext_resource type="Script" uid="uid://bhlwa3k80pmma" path="res://scripts/inicio.gd" id="1_6ca52"]
+
+[node name="Inicio" type="Control" unique_id=1361906158]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6ca52")
+
+[node name="Casa1" type="OptionButton" parent="." unique_id=616567309]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.30800003
+anchor_top = 0.293
+anchor_right = 0.48700002
+anchor_bottom = 0.34600002
+offset_left = -75.81604
+offset_top = 1.1359863
+offset_right = -76.02405
+offset_bottom = 0.7919922
+item_count = 3
+popup/item_0/text = "1 digitos"
+popup/item_0/id = 1
+popup/item_1/text = "2 dígitos"
+popup/item_1/id = 2
+popup/item_2/text = "3 dígitos"
+popup/item_2/id = 3
+
+[node name="Casa2" type="OptionButton" parent="." unique_id=1282686128]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.578125
+anchor_top = 0.29500002
+anchor_right = 0.77012503
+anchor_bottom = 0.34600002
+offset_left = -2.0
+offset_top = -0.16000366
+offset_right = -0.184021
+offset_bottom = -0.20800781
+item_count = 3
+popup/item_0/text = "1 digitos"
+popup/item_0/id = 1
+popup/item_1/text = "2 digitos"
+popup/item_1/id = 2
+popup/item_2/text = "3 digitos"
+popup/item_2/id = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Operacao" type="OptionButton" parent="." unique_id=657683557]
+layout_mode = 0
+offset_left = 533.0
+offset_top = 191.0
+offset_right = 609.0
+offset_bottom = 227.0
+item_count = 1
+popup/item_0/text = "+"
+popup/item_0/id = 0
+
+[node name="Button" type="Button" parent="." unique_id=232096502]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.437
+anchor_top = 0.43800002
+anchor_right = 0.54800004
+anchor_bottom = 0.49800003
+offset_left = -0.42401123
+offset_top = 0.17599487
+offset_right = -0.2960205
+offset_bottom = 0.29599
+text = "Start"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
