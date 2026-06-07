@@ -5,6 +5,17 @@
 [ext_resource type="AudioStream" uid="uid://cughixw08hxbn" path="res://audio/key.mp3" id="3_2lcws"]
 [ext_resource type="AudioStream" uid="uid://b7bwuhsm44o7c" path="res://audio/correct.mp3" id="4_d8qyl"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_614nl"]
+font_size = 40
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_w70cq"]
+font_size = 32
+font_color = Color(0.16924527, 0.1692453, 0.16924527, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8jjo6"]
+font_color = Color(0.30323282, 0.30323282, 0.30323282, 1)
+
 [sub_resource type="LabelSettings" id="LabelSettings_d8qyl"]
 font_size = 100
 font_color = Color(0, 0.35686275, 0, 1)
@@ -518,6 +529,50 @@ stream = ExtResource("3_2lcws")
 [node name="correct" type="AudioStreamPlayer" parent="." unique_id=1577324857]
 stream = ExtResource("4_d8qyl")
 
+[node name="head" type="HBoxContainer" parent="." unique_id=751007688]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 1153.0
+offset_bottom = 55.0
+size_flags_vertical = 0
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="head" unique_id=1478304058]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_right = 15
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="head/MarginContainer" unique_id=2039114985]
+layout_mode = 2
+size_flags_horizontal = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="head/MarginContainer/AspectRatioContainer" unique_id=1282199257]
+layout_mode = 2
+theme_override_constants/margin_top = 8
+
+[node name="counter" type="Label" parent="head/MarginContainer/AspectRatioContainer/MarginContainer" unique_id=573939942]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "00/00"
+label_settings = SubResource("LabelSettings_614nl")
+
+[node name="AspectRatioContainer2" type="VBoxContainer" parent="head/MarginContainer" unique_id=287837932]
+layout_mode = 2
+size_flags_horizontal = 10
+
+[node name="timer" type="Label" parent="head/MarginContainer/AspectRatioContainer2" unique_id=1134283832]
+layout_mode = 2
+text = "0.0"
+label_settings = SubResource("LabelSettings_w70cq")
+
+[node name="timerNumber" type="Label" parent="head/MarginContainer/AspectRatioContainer2" unique_id=1633888226]
+layout_mode = 2
+text = "0.0"
+label_settings = SubResource("LabelSettings_8jjo6")
+horizontal_alignment = 1
+
 [node name="main" type="AspectRatioContainer" parent="." unique_id=1056400770]
 layout_mode = 1
 anchors_preset = 15
@@ -525,7 +580,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="main" unique_id=1053093969]
 layout_mode = 2

@@ -77,14 +77,38 @@ offset_right = -0.2960205
 offset_bottom = 0.29599
 text = "Start"
 
-[node name="quantidade" type="OptionButton" parent="." unique_id=801577989]
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="." unique_id=279100958]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 96.0
+offset_right = 20.0
+offset_bottom = 136.0
+grow_horizontal = 2
+
+[node name="counter" type="Label" parent="AspectRatioContainer" unique_id=518830361]
+layout_mode = 2
+text = "0"
+horizontal_alignment = 1
+
+[node name="ButtonMenos" type="Button" parent="." unique_id=1377199751]
 layout_mode = 0
-offset_left = 543.0
-offset_top = 130.0
-offset_right = 606.0
-offset_bottom = 159.0
-item_count = 1
-popup/item_0/text = "10"
-popup/item_0/id = 10
+offset_left = 488.0
+offset_top = 96.0
+offset_right = 528.0
+offset_bottom = 138.0
+text = "-"
+
+[node name="ButtonMais" type="Button" parent="." unique_id=2134317971]
+layout_mode = 0
+offset_left = 620.0
+offset_top = 96.0
+offset_right = 660.0
+offset_bottom = 136.0
+text = "+"
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="pressed" from="ButtonMenos" to="." method="_on_button_menos_pressed"]
+[connection signal="pressed" from="ButtonMais" to="." method="_on_button_mais_pressed"]
