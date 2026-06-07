@@ -7,6 +7,7 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_kqpku"]
 font_size = 250
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Animation" id="Animation_6odux"]
 length = 0.001

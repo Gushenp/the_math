@@ -77,4 +77,14 @@ offset_right = -0.2960205
 offset_bottom = 0.29599
 text = "Start"
 
+[node name="quantidade" type="OptionButton" parent="." unique_id=801577989]
+layout_mode = 0
+offset_left = 543.0
+offset_top = 130.0
+offset_right = 606.0
+offset_bottom = 159.0
+item_count = 1
+popup/item_0/text = "10"
+popup/item_0/id = 10
+
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

@@ -5,6 +5,492 @@
 [ext_resource type="AudioStream" uid="uid://cughixw08hxbn" path="res://audio/key.mp3" id="3_2lcws"]
 [ext_resource type="AudioStream" uid="uid://b7bwuhsm44o7c" path="res://audio/correct.mp3" id="4_d8qyl"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_d8qyl"]
+font_size = 100
+font_color = Color(0, 0.35686275, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_v5f50"]
+font_size = 100
+font_color = Color(0, 0.35686275, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mjlty"]
+font_size = 100
+font_color = Color(0, 0.35686275, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d8qyl"]
+bg_color = Color(1, 1, 1, 1)
+border_color = Color(18.892157, 18.892157, 18.892157, 0)
+border_blend = true
+shadow_color = Color(18.892157, 18.892157, 18.892157, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mjlty"]
+bg_color = Color(1, 1, 1, 1)
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Animation" id="Animation_d8qyl"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("main/VBoxContainer/HBoxContainer:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("main/VBoxContainer/HBoxContainer:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("main/VBoxContainer/HBoxContainer:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("main/VBoxContainer/HBoxContainer:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("main/VBoxContainer/HBoxContainer/Campo1:label_settings:font_color:r")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("main/VBoxContainer/HBoxContainer/Campo1:label_settings:font_color:g")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.35686275, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("main/VBoxContainer/HBoxContainer/Campo1:label_settings:font_color:b")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("main/VBoxContainer/HBoxContainer/Campo1:label_settings:font_color:a")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_614nl"]
+resource_name = "correctNumber"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("main/VBoxContainer/HBoxContainer/Campo1:label_settings:font_color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.033333335, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("main/VBoxContainer/HBoxContainer/Campo1:label_settings:font_color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.404555, -0.033333335, -0.06742583, 0, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("main/VBoxContainer/HBoxContainer/Campo1:label_settings:font_color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 3.85046e-07, -0.033333335, -6.417434e-08, 0, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("main/VBoxContainer/HBoxContainer/Campo1:label_settings:font_color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.033333335, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("main/VBoxContainer/HBoxContainer/Operacao:label_settings:font_color:r")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.033333335, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("main/VBoxContainer/HBoxContainer/Operacao:label_settings:font_color:g")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.404555, -0.033333335, -0.06742583, 0, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("main/VBoxContainer/HBoxContainer/Operacao:label_settings:font_color:b")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 3.85046e-07, -0.033333335, -6.417434e-08, 0, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("main/VBoxContainer/HBoxContainer/Operacao:label_settings:font_color:a")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.033333335, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("main/VBoxContainer/HBoxContainer/Campo2:label_settings:font_color:r")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.033333335, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+tracks/9/type = "bezier"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("main/VBoxContainer/HBoxContainer/Campo2:label_settings:font_color:g")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.404555, -0.033333335, -0.06742583, 0, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+tracks/10/type = "bezier"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("main/VBoxContainer/HBoxContainer/Campo2:label_settings:font_color:b")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 3.85046e-07, -0.033333335, -6.417434e-08, 0, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+tracks/11/type = "bezier"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("main/VBoxContainer/HBoxContainer/Campo2:label_settings:font_color:a")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.033333335, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+
+[sub_resource type="Animation" id="Animation_mjlty"]
+resource_name = "introNumber"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("main/VBoxContainer/HBoxContainer:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(2, 0),
+"points": PackedFloat32Array(1, 0, 0, 0.05555556, 0, 1, -0.083333336, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.33333334)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("main/VBoxContainer/HBoxContainer:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(2, 0),
+"points": PackedFloat32Array(1, 0, 0, 0.05555556, 0, 1, -0.083333336, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.33333334)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("main/VBoxContainer/HBoxContainer:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(2, 0),
+"points": PackedFloat32Array(1, 0, 0, 0.05555556, 0, 1, -0.083333336, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.33333334)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("main/VBoxContainer/HBoxContainer:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(2, 0),
+"points": PackedFloat32Array(0, 0, 0, 0.05555556, 0.16666669, 1, -0.083333336, -0.16666667, 0, 0),
+"times": PackedFloat32Array(0, 0.33333334)
+}
+
+[sub_resource type="Animation" id="Animation_v5f50"]
+resource_name = "outNumber"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("main/VBoxContainer/HBoxContainer:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.06666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("main/VBoxContainer/HBoxContainer:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.06666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("main/VBoxContainer/HBoxContainer:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.06666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("main/VBoxContainer/HBoxContainer:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, -0.06666667, 0.16666667, 0, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+
+[sub_resource type="Animation" id="Animation_w70cq"]
+resource_name = "resetNumberColor"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("main/VBoxContainer/HBoxContainer/Campo1:label_settings:font_color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.06666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("main/VBoxContainer/HBoxContainer/Campo1:label_settings:font_color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.35686275, -0.25, 0, 0.25, 0, 0, -0.06666667, 0.059477128, 0, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("main/VBoxContainer/HBoxContainer/Campo1:label_settings:font_color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.06666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("main/VBoxContainer/HBoxContainer/Campo1:label_settings:font_color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.06666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("main/VBoxContainer/HBoxContainer/Operacao:label_settings:font_color:r")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.06666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("main/VBoxContainer/HBoxContainer/Operacao:label_settings:font_color:g")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.35686275, -0.25, 0, 0.25, 0, 0, -0.06666667, 0.059477128, 0, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("main/VBoxContainer/HBoxContainer/Operacao:label_settings:font_color:b")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.06666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("main/VBoxContainer/HBoxContainer/Operacao:label_settings:font_color:a")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.06666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("main/VBoxContainer/HBoxContainer/Campo2:label_settings:font_color:r")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.06666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+tracks/9/type = "bezier"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("main/VBoxContainer/HBoxContainer/Campo2:label_settings:font_color:g")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.35686275, -0.25, 0, 0.25, 0, 0, -0.06666667, 0.059477128, 0, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+tracks/10/type = "bezier"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("main/VBoxContainer/HBoxContainer/Campo2:label_settings:font_color:b")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.06666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+tracks/11/type = "bezier"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("main/VBoxContainer/HBoxContainer/Campo2:label_settings:font_color:a")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.06666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v5f50"]
+_data = {
+&"RESET": SubResource("Animation_d8qyl"),
+&"correctNumber": SubResource("Animation_614nl"),
+&"introNumber": SubResource("Animation_mjlty"),
+&"outNumber": SubResource("Animation_v5f50"),
+&"resetNumberColor": SubResource("Animation_w70cq")
+}
+
 [node name="Jogo" type="Control" unique_id=255386979]
 layout_mode = 3
 anchors_preset = 15
@@ -15,74 +501,16 @@ grow_vertical = 2
 script = ExtResource("1_sstdc")
 metadata/_edit_use_anchors_ = true
 
-[node name="AnimacaoContagem" parent="." unique_id=604644752 instance=ExtResource("2_slshw")]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2016163458]
 layout_mode = 1
-
-[node name="LineEdit" type="LineEdit" parent="." unique_id=979543343]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -118.125
-offset_top = -15.5
-offset_right = 118.125
-offset_bottom = 15.5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-alignment = 2
-virtual_keyboard_show_on_focus = false
-virtual_keyboard_type = 2
-text_direction = 1
 
-[node name="Button" type="Button" parent="." unique_id=87040203]
+[node name="AnimacaoContagem" parent="." unique_id=604644752 instance=ExtResource("2_slshw")]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.47000003
-anchor_top = 0.56200004
-anchor_right = 0.527
-anchor_bottom = 0.59400004
-offset_left = -0.44006348
-offset_top = -0.17602539
-offset_right = -0.104003906
-offset_bottom = 0.08798218
-grow_horizontal = 2
-grow_vertical = 0
-text = "Enter
-"
-
-[node name="Campo1" type="Label" parent="." unique_id=455592511]
-layout_mode = 0
-offset_left = 651.0
-offset_top = 191.0
-offset_right = 691.0
-offset_bottom = 214.0
-text = "00"
-
-[node name="Campo2" type="Label" parent="." unique_id=1451926774]
-layout_mode = 0
-offset_left = 652.0
-offset_top = 211.0
-offset_right = 692.0
-offset_bottom = 234.0
-text = "00"
-
-[node name="Label" type="Label" parent="." unique_id=871568491]
-layout_mode = 0
-offset_left = 530.0
-offset_top = 257.0
-offset_right = 694.0
-offset_bottom = 280.0
-text = "________________________"
-
-[node name="Operacao" type="Label" parent="." unique_id=102305910]
-layout_mode = 0
-offset_left = 573.0
-offset_top = 247.0
-offset_right = 613.0
-offset_bottom = 270.0
-text = "+"
 
 [node name="key" type="AudioStreamPlayer" parent="." unique_id=2061503737]
 stream = ExtResource("3_2lcws")
@@ -90,6 +518,67 @@ stream = ExtResource("3_2lcws")
 [node name="correct" type="AudioStreamPlayer" parent="." unique_id=1577324857]
 stream = ExtResource("4_d8qyl")
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="main" type="AspectRatioContainer" parent="." unique_id=1056400770]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="main" unique_id=1053093969]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="main/VBoxContainer" unique_id=189802777]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Campo1" type="Label" parent="main/VBoxContainer/HBoxContainer" unique_id=455592511]
+layout_mode = 2
+text = "00"
+label_settings = SubResource("LabelSettings_d8qyl")
+
+[node name="Operacao" type="Label" parent="main/VBoxContainer/HBoxContainer" unique_id=102305910]
+layout_mode = 2
+text = "+"
+label_settings = SubResource("LabelSettings_v5f50")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Campo2" type="Label" parent="main/VBoxContainer/HBoxContainer" unique_id=1451926774]
+layout_mode = 2
+text = "00"
+label_settings = SubResource("LabelSettings_mjlty")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="main/VBoxContainer" unique_id=28565772]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="main/VBoxContainer/HBoxContainer2" unique_id=696933006]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="LineEdit" type="LineEdit" parent="main/VBoxContainer/HBoxContainer2/VBoxContainer" unique_id=979543343]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_d8qyl")
+theme_override_styles/focus = SubResource("StyleBoxFlat_mjlty")
+alignment = 1
+virtual_keyboard_show_on_focus = false
+virtual_keyboard_type = 2
+text_direction = 1
+
+[node name="numberAnimation" type="AnimationPlayer" parent="." unique_id=1243040857]
+libraries/ = SubResource("AnimationLibrary_v5f50")
 
 [editable path="AnimacaoContagem"]
