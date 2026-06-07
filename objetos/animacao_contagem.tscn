@@ -1,0 +1,242 @@
+[gd_scene format=3 uid="uid://b1mmsnp434rsb"]
+
+[ext_resource type="Texture2D" uid="uid://1f4lnwqusv08" path="res://sprites/circle1.png" id="1_m1mxs"]
+[ext_resource type="Texture2D" uid="uid://b6bx087kmglng" path="res://sprites/circle2.png" id="2_f53bg"]
+[ext_resource type="AudioStream" uid="uid://cfu12faoh6hox" path="res://audio/timerCounter.wav" id="3_gbnrm"]
+[ext_resource type="AudioStream" uid="uid://ru6f1f0lpb6x" path="res://audio/timerStart.wav" id="4_6xrl0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_kqpku"]
+font_size = 250
+
+[sub_resource type="Animation" id="Animation_6odux"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Circle1:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Circle1:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["3"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("timerStart:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_c3mfv"]
+resource_name = "intro"
+length = 4.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Circle1:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.23333333, -1e-05, 1.3, -0.13274209, -0.216665, 0, 0, 1, -0.03333333, 0.042857133, 0.0055555603, -0.007142862, 1, -0.021955967, 0, 0, 0, 1e-05, -0.016666671, 0.16666502, 0, 0, 1.3, -0.13274209, -0.216665, 0, 0, 1, -0.03333333, 0.042857133, 0.0055555603, -0.007142862, 1, -0.021955967, 0, 0, 0, 1e-05, -0.016666671, 0.16666502, 0, 0, 1.3, -0.13274209, -0.216665, 0, 0, 1, -0.03333333, 0.042857133, 0.0055555603, -0.007142862, 1, -0.021955967, 0, 0, 0, 1e-05, -0.016666671, 0.16666502, 0, 0),
+"times": PackedFloat32Array(0, 0.36666667, 0.56666666, 0.9416667, 1, 1.3666667, 1.5666667, 1.9416668, 2, 2.3666666, 2.5666666, 2.9416666, 3)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Circle1:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0, 1.3, -0.13274209, -0.216665, 0, 0, 1, -0.03333333, 0.042857133, 0.0055555603, -0.007142862, 1, -0.03392458, 0.049999993, 0, 0, 1e-05, -0.016666671, 0.16666502, 0, 0, 1.3, -0.13274209, -0.216665, 0, 0, 1, -0.03333333, 0.042857133, 0.0055555603, -0.007142862, 1, -0.03392458, 0.049999993, 0, 0, 1e-05, -0.016666671, 0.16666502, 0, 0, 1.3, -0.13274209, -0.216665, 0, 0, 1, -0.03333333, 0.042857133, 0.0055555603, -0.007142862, 1, -0.03392458, 0.049999993, 0, 0, 1e-05, -0.016666671, 0.16666502, 0, 0),
+"times": PackedFloat32Array(0, 0.36666667, 0.56666666, 0.9416667, 1, 1.3666667, 1.5666667, 1.9416668, 2, 2.3666666, 2.5666666, 2.9416666, 3)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Circle2:scale:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0, 1.3, -0.13274209, -0.216665, 0, 0, 1, -0.03333333, 0.042857133, 0.0055555603, -0.007142862, 1, -0.03392458, 0.049999993, 0, 0, 1, -0.03333333, 0.042857133, 0.0055555603, -0.007142862, 1e-05, -0.016666671, 0.16666502, 0, 0, 1.3, -0.13274209, -0.216665, 0, 0, 1, -0.03333333, 0.042857133, 0.0055555603, -0.007142862, 1, -0.03392458, 0.049999993, 0, 0, 1, -0.03333333, 0.042857133, 0.0055555603, -0.007142862, 1e-05, -0.25, 0, 0.25, 0, 1.3, -0.13274209, -0.216665, 0, 0, 1, -0.03333333, 0.042857133, 0.0055555603, -0.007142862, 1, -0.03392458, 0.049999993, 0, 0, 1, -0.03333333, 0.042857133, 0.0055555603, -0.007142862, 1e-05, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3, 0.46666676, 0.50000006, 0.93333334, 1.0096102, 1.3, 1.4666667, 1.5, 1.9333333, 2, 2.3, 2.4666667, 2.5, 2.9333334, 3)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Circle2:scale:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0, 1.3, -0.13274209, -0.216665, 0, 0, 1, -0.03333333, 0.042857133, 0.0055555603, -0.007142862, 1, -0.03392458, 0.049999993, 0, 0, 1, -0.03333333, 0.042857133, 0.0055555603, -0.007142862, 1e-05, -0.016666671, 0.16666502, 0, 0, 1.3, -0.13274209, -0.216665, 0, 0, 1, -0.03333333, 0.042857133, 0.0055555603, -0.007142862, 1, -0.03392458, 0.049999993, 0, 0, 1, -0.03333333, 0.042857133, 0.0055555603, -0.007142862, 1e-05, -0.25, 0, 0.25, 0, 1.3, -0.13274209, -0.216665, 0, 0, 1, -0.03333333, 0.042857133, 0.0055555603, -0.007142862, 1, -0.03392458, 0.049999993, 0, 0, 1, -0.03333333, 0.042857133, 0.0055555603, -0.007142862, 1e-05, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3, 0.46666676, 0.50000006, 0.93333334, 1.0096102, 1.3, 1.4666667, 1.5, 1.9333333, 2, 2.3, 2.4666667, 2.5, 2.9333334, 3)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Label:scale:x")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0, 1.3, -0.13274209, -0.216665, 0, 0, 1, -0.03333333, 0.042857133, 0.0055555603, -0.007142862, 1, -0.03392458, 0.049999993, 0, 0, 1, -0.03333333, 0.042857133, 0.0055555603, -0.007142862, 1e-05, -0.25, 0, 0.25, 0, 1.3, -0.13274209, -0.216665, 0, 0, 1, -0.03333333, 0.042857133, 0.0055555603, -0.007142862, 1, -0.03392458, 0.049999993, 0, 0, 1, -0.03333333, 0.042857133, 0.0055555603, -0.007142862, 1e-05, -0.25, 0, 0.25, 0, 1e-05, -0.016666671, 0.16666502, 0, 0, 1.3, -0.13274209, -0.216665, 0, 0, 1, -0.03333333, 0.042857133, 0.0055555603, -0.007142862, 1, -0.03392458, 0.049999993, 0, 0, 1, -0.03333333, 0.042857133, 0.0055555603, -0.007142862, 1e-05, -0.25, 0, 0.25, 0, 1e-05, -0.016666671, 0.16666502, 0, 0),
+"times": PackedFloat32Array(0, 0.3, 0.4680223, 0.5006241, 0.9311332, 0.99937594, 1.3, 1.4680222, 1.5006241, 1.9311332, 1.9993758, 2, 2.299376, 2.4673982, 2.5, 2.930509, 2.9987519, 2.999376)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Label:scale:y")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0, 1.3, -0.13274209, -0.216665, 0, 0, 1, -0.03333333, 0.042857133, 0.0055555603, -0.007142862, 1, -0.03392458, 0.049999993, 0, 0, 1, -0.03333333, 0.042857133, 0.0055555603, -0.007142862, 1e-05, -0.25, 0, 0.25, 0, 1.3, -0.13274209, -0.216665, 0, 0, 1, -0.03333333, 0.042857133, 0.0055555603, -0.007142862, 1, -0.03392458, 0.049999993, 0, 0, 1, -0.03333333, 0.042857133, 0.0055555603, -0.007142862, 1e-05, -0.25, 0, 0.25, 0, 1e-05, -0.016666671, 0.16666502, 0, 0, 1.3, -0.13274209, -0.216665, 0, 0, 1, -0.03333333, 0.042857133, 0.0055555603, -0.007142862, 1, -0.03392458, 0.049999993, 0, 0, 1, -0.03333333, 0.042857133, 0.0055555603, -0.007142862, 1e-05, -0.25, 0, 0.25, 0, 1e-05, -0.016666671, 0.16666502, 0, 0),
+"times": PackedFloat32Array(0, 0.3, 0.4680223, 0.5006241, 0.9311332, 0.99937594, 1.3, 1.4680222, 1.5006241, 1.9311332, 1.9993758, 2, 2.299376, 2.4673982, 2.5, 2.930509, 2.9987519, 2.999376)
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Label:text")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1.0061046, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": ["3", "2", "1"]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("timerCounter:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1.0333333, 2.0333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, true, true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("timerStart:playing")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(2.9978285),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k3ecm"]
+_data = {
+&"RESET": SubResource("Animation_6odux"),
+&"intro": SubResource("Animation_c3mfv")
+}
+
+[node name="AnimacaoContagem" type="Control" unique_id=604644752]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="." unique_id=808544993]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -300.0
+offset_right = 300.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1e-05, 1e-05)
+pivot_offset = Vector2(300, 300)
+text = "3"
+label_settings = SubResource("LabelSettings_kqpku")
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 171
+
+[node name="Circle1" type="TextureRect" parent="." unique_id=935782963]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -250.0
+offset_right = 250.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1e-05, 1e-05)
+pivot_offset = Vector2(250, 250)
+texture = ExtResource("1_m1mxs")
+
+[node name="Circle2" type="TextureRect" parent="." unique_id=745288975]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -250.0
+offset_right = 250.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1e-05, 1e-05)
+pivot_offset = Vector2(250, 250)
+texture = ExtResource("2_f53bg")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1786184987]
+libraries/ = SubResource("AnimationLibrary_k3ecm")
+
+[node name="timerCounter" type="AudioStreamPlayer" parent="." unique_id=2145700318]
+stream = ExtResource("3_gbnrm")
+
+[node name="timerStart" type="AudioStreamPlayer" parent="." unique_id=51981575]
+stream = ExtResource("4_6xrl0")
