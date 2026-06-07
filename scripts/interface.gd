@@ -48,8 +48,12 @@ func cacularResultadoEsperado():
 	if (Dados.operacaoID == 0):
 		resultado = numero1 + numero2
 		
-	print(numero1, "+", numero2, "=", resultado)
-
+	if (Dados.operacaoID == 1):
+		resultado = numero1 - numero2
+	
+	if (Dados.operacaoID == 2):
+		resultado = numero1 * numero2
+		
 func calcularAcerto():
 	var entradaUsuario = campoDeEntrada.text
 	
@@ -70,3 +74,9 @@ func atualizarVisual(numero1, numero2):
 	if (Dados.operacaoID == 0):
 		OperacaoView.text = "+"
 	
+	if (Dados.operacaoID == 1):
+		OperacaoView.text = "-"
+		
+	if (Dados.operacaoID == 2):
+		OperacaoView.text = "*"
+		

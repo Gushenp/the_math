@@ -56,9 +56,13 @@ offset_left = 533.0
 offset_top = 191.0
 offset_right = 609.0
 offset_bottom = 227.0
-item_count = 1
+item_count = 3
 popup/item_0/text = "+"
 popup/item_0/id = 0
+popup/item_1/text = "-"
+popup/item_1/id = 1
+popup/item_2/text = "*"
+popup/item_2/id = 2
 
 [node name="Button" type="Button" parent="." unique_id=232096502]
 layout_mode = 1
