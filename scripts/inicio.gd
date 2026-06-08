@@ -11,6 +11,7 @@ func _on_button_button_down() -> void:
 	Dados.campo1ID = campo1.get_selected_id()
 	Dados.campo2ID = campo2.get_selected_id()
 	Dados.operacaoID = operacao.get_selected_id()
+	Dados.quantidade = quantidade
 	get_tree().change_scene_to_file("res://objetos/Jogo.tscn")
 	pass 
 

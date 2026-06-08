@@ -4,19 +4,21 @@ extends Control
 @onready var campo1View = $main/VBoxContainer/HBoxContainer/Campo1
 @onready var campo2View = $main/VBoxContainer/HBoxContainer/Campo2
 @onready var OperacaoView = $main/VBoxContainer/HBoxContainer/Operacao
-@onready var counter = $head/MarginContainer/AspectRatioContainer/MarginContainer/counter
-@onready var timer = $head/MarginContainer/AspectRatioContainer2/timer
-@onready var timerNum = $head/MarginContainer/AspectRatioContainer2/timerNumber
-@onready var quantidade = Dados.quantidade
+@onready var counter = $head/MarginContainer/VBoxContainer/AspectRatioContainer/MarginContainer/counter
+@onready var timer = $head/MarginContainer/VBoxContainer/AspectRatioContainer2/timer
+@onready var timerNum = $head/MarginContainer/VBoxContainer/AspectRatioContainer2/timerNumber
+@onready var quantidade = 10 #Dados.quantidade
 @onready var main = $main
+@onready var head = $head
 @onready var numberintro = $numberAnimation
 @onready var intro = $AnimacaoContagem/AnimationPlayer
+@onready var headOut = $PlacarAimation
 @onready var audioTecla = $key
 @onready var correctAudio = $correct
 
-var IDCampo1 = Dados.campo1ID
-var IDcampo2 = Dados.campo2ID
-var IDoperacao = Dados.operacaoID
+var IDCampo1 = 3 #Dados.campo1ID
+var IDcampo2 = 3 #Dados.campo2ID
+var IDoperacao = 0# Dados.operacaoID
 func _ready() -> void:
 	start()
 
@@ -34,20 +36,25 @@ func _process(delta: float) -> void:
 		var tempo_numero = Time.get_ticks_msec() / 1000.0 - temp_inicio
 		timerNum.text = "%.2f" % tempo_numero
 	
+	
 var temp_inicio = 0.0
 var temp_inicio_sessao = 0.0
 func start():
 	main.visible = false
+	head.visible = false
 	intro.play("intro")
 	campoDeEntrada.grab_focus()
 	cacularResultadoEsperado()
 	await get_tree().create_timer(3.1).timeout
 	counter.text = str(contador) + "/" + str(quantidade)
+	numberintro.play("introNumber")
+	await get_tree().create_timer(0.1).timeout
 	main.visible = true
+	head.visible = true
 	startTimer = true
 	temp_inicio_sessao = Time.get_ticks_msec() / 1000.0
 	temp_inicio = Time.get_ticks_msec() / 1000.0
-	numberintro.play("introNumber")
+
 
 func retornarQuantidadeCasaMax(value):
 	if value == 1:
@@ -95,8 +102,13 @@ func cacularResultadoEsperado():
 		resultado = numero1 * numero2
 
 var respondendo = false
+var jogoFinalizado = false
 func calcularAcerto():
 	var entradaUsuario = campoDeEntrada.text
+	
+	if jogoFinalizado:
+		
+		return
 	
 	if entradaUsuario.is_valid_int():
 		
@@ -110,7 +122,6 @@ func calcularAcerto():
 			#tempo 
 			var tempo_gasto = Time.get_ticks_msec() / 1000.0 - temp_inicio
 			tempos.append(tempo_gasto)
-			print("%.2f" % tempo_gasto)
 			
 			numberintro.play("correctNumber")
 			correctAudio.play()
@@ -118,9 +129,14 @@ func calcularAcerto():
 			timerCounter()
 			print(contador)
 			campoDeEntrada.clear()
-			cacularResultadoEsperado()
 			respondendo = false
 			
+			if contador == quantidade:
+				numberintro.play("greenNumber")
+				finalizarJogo()
+				return
+			
+			cacularResultadoEsperado()
 		campoDeEntrada.grab_focus()
 
 func _input(event):
@@ -149,3 +165,15 @@ func atualizarVisual(numero1, numero2):
 func timerCounter():
 	contador += 1
 	counter.text = str(contador) + "/" + str(quantidade)
+
+func finalizarJogo():
+	jogoFinalizado = true
+	startTimer = false
+	numberintro.play("greenNumber")
+	await get_tree().create_timer(1.0).timeout
+	$win.play()
+	await get_tree().create_timer(2.0).timeout
+	numberintro.play("outNumber")
+	headOut.play("placarOut")
+
+	print("finalizado")
