@@ -1,86 +1,10 @@
 [gd_scene format=3 uid="uid://rutv2tbnansn"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_enyx4"]
-font_size = 40
-font_color = Color(0, 0, 0, 1)
+font_size = 35
 
-[sub_resource type="Animation" id="Animation_8om7o"]
-length = 0.001
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AspectRatioContainer:position:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AspectRatioContainer:position:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/2/type = "bezier"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("AspectRatioContainer/counter:label_settings:font_size")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(40, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-
-[sub_resource type="Animation" id="Animation_7lu34"]
-resource_name = "win"
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AspectRatioContainer:position:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 2),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 446, -0.16666667, -74.333336, 0, 0),
-"times": PackedFloat32Array(0, 1)
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AspectRatioContainer:position:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"handle_modes": PackedInt32Array(0, 2),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 76, -0.16666667, -12.666667, 0, 0),
-"times": PackedFloat32Array(0, 1)
-}
-tracks/2/type = "bezier"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("AspectRatioContainer/counter:label_settings:font_size")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"handle_modes": PackedInt32Array(0, 2),
-"points": PackedFloat32Array(40, -0.25, 0, 0.25, 0, 100, -0.16666667, -10, 0, 0),
-"times": PackedFloat32Array(0, 1)
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_tjq3f"]
-_data = {
-&"RESET": SubResource("Animation_8om7o"),
-&"win": SubResource("Animation_7lu34")
-}
+[sub_resource type="LabelSettings" id="LabelSettings_8om7o"]
+font_size = 57
 
 [node name="Win" type="Control" unique_id=874449536]
 layout_mode = 3
@@ -89,25 +13,106 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 4
 
-[node name="AspectRatioContainer" type="AspectRatioContainer" parent="." unique_id=1675642941]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=906782629]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -576.0
-offset_right = -315.99976
-offset_bottom = 260.0
+offset_left = -145.5
+offset_top = 39.0
+offset_right = 145.5
+offset_bottom = 383.0
 grow_horizontal = 2
-pivot_offset = Vector2(130, 130)
-size_flags_horizontal = 0
-size_flags_vertical = 0
 
-[node name="counter" type="Label" parent="AspectRatioContainer" unique_id=1382015790]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=561489805]
 layout_mode = 2
-text = "0/10"
+theme_override_constants/margin_top = 15
+
+[node name="Title" type="AspectRatioContainer" parent="VBoxContainer" unique_id=898660932]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Title" unique_id=1236446251]
+layout_mode = 2
+text = "Sessão Concluída"
 label_settings = SubResource("LabelSettings_enyx4")
 horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1355276389]
-libraries/ = SubResource("AnimationLibrary_tjq3f")
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer" unique_id=529236396]
+layout_mode = 2
+theme_override_constants/margin_top = 33
+
+[node name="Quantidade" type="AspectRatioContainer" parent="VBoxContainer" unique_id=861465472]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Quantidade" unique_id=1683879477]
+layout_mode = 2
+text = "00/00"
+label_settings = SubResource("LabelSettings_8om7o")
+
+[node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer" unique_id=797565524]
+layout_mode = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 23
+
+[node name="TempoTotal" type="AspectRatioContainer" parent="VBoxContainer" unique_id=805945484]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/TempoTotal" unique_id=1716259420]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="VBoxContainer/TempoTotal/VBoxContainer" unique_id=1534030104]
+layout_mode = 2
+text = "Tempo Total"
+
+[node name="Label2" type="Label" parent="VBoxContainer/TempoTotal/VBoxContainer" unique_id=1594154754]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "0.000"
+
+[node name="MarginContainer4" type="MarginContainer" parent="VBoxContainer" unique_id=1520796416]
+layout_mode = 2
+theme_override_constants/margin_top = 18
+
+[node name="Velocidade" type="AspectRatioContainer" parent="VBoxContainer" unique_id=1988308460]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Velocidade" unique_id=1439159693]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Velocidade/VBoxContainer" unique_id=1928454400]
+layout_mode = 2
+text = "Velocidade"
+
+[node name="Label2" type="Label" parent="VBoxContainer/Velocidade/VBoxContainer" unique_id=559418897]
+layout_mode = 2
+text = "0.000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button2" type="Button" parent="." unique_id=465525049]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -90.0
+offset_top = 528.0
+offset_right = 90.0
+offset_bottom = 568.0
+grow_horizontal = 2
+text = "Menu"
+
+[node name="Button" type="Button" parent="." unique_id=1270265688]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -88.0
+offset_top = 464.0
+offset_right = 88.0
+offset_bottom = 506.0
+grow_horizontal = 2
+text = "Jogar Novamente"
