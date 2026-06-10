@@ -5,6 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://cughixw08hxbn" path="res://audio/key.mp3" id="3_2lcws"]
 [ext_resource type="AudioStream" uid="uid://b7bwuhsm44o7c" path="res://audio/correct.mp3" id="4_d8qyl"]
 [ext_resource type="AudioStream" uid="uid://dmr5gdr0y34bq" path="res://audio/win.mp3" id="5_mjlty"]
+[ext_resource type="PackedScene" uid="uid://rutv2tbnansn" path="res://objetos/win.tscn" id="6_v5f50"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_614nl"]
 font_size = 40
@@ -1066,4 +1067,8 @@ libraries/ = SubResource("AnimationLibrary_vcwt2")
 [node name="win" type="AudioStreamPlayer" parent="." unique_id=1829583618]
 stream = ExtResource("5_mjlty")
 
+[node name="Win" parent="." unique_id=874449536 instance=ExtResource("6_v5f50")]
+layout_mode = 1
+
 [editable path="AnimacaoContagem"]
+[editable path="Win"]

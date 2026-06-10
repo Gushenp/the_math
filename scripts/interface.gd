@@ -7,17 +7,18 @@ extends Control
 @onready var counter = $head/MarginContainer/VBoxContainer/AspectRatioContainer/MarginContainer/counter
 @onready var timer = $head/MarginContainer/VBoxContainer/AspectRatioContainer2/timer
 @onready var timerNum = $head/MarginContainer/VBoxContainer/AspectRatioContainer2/timerNumber
-@onready var quantidade = 10 #Dados.quantidade
+@onready var quantidade = 1 #Dados.quantidade
 @onready var main = $main
 @onready var head = $head
 @onready var numberintro = $numberAnimation
 @onready var intro = $AnimacaoContagem/AnimationPlayer
+@onready var win = $Win/AnimationPlayer
 @onready var headOut = $PlacarAimation
 @onready var audioTecla = $key
 @onready var correctAudio = $correct
 
-var IDCampo1 = 3 #Dados.campo1ID
-var IDcampo2 = 3 #Dados.campo2ID
+var IDCampo1 = 1 #Dados.campo1ID
+var IDcampo2 = 1 #Dados.campo2ID
 var IDoperacao = 0# Dados.operacaoID
 func _ready() -> void:
 	start()
@@ -40,6 +41,7 @@ func _process(delta: float) -> void:
 var temp_inicio = 0.0
 var temp_inicio_sessao = 0.0
 func start():
+	$Win/AnimationPlayer.play("RESET")
 	main.visible = false
 	head.visible = false
 	intro.play("intro")
@@ -170,10 +172,21 @@ func finalizarJogo():
 	jogoFinalizado = true
 	startTimer = false
 	numberintro.play("greenNumber")
+	$Win/VBoxContainer/Quantidade/Label.text = str(contador) + "/" + str(quantidade)
 	await get_tree().create_timer(1.0).timeout
 	$win.play()
 	await get_tree().create_timer(2.0).timeout
 	numberintro.play("outNumber")
 	headOut.play("placarOut")
-
+	await get_tree().create_timer(2.0).timeout
+	win.play("showSessao")
+	await get_tree().create_timer(1.0).timeout
+	win.play("showQuant")
+	await get_tree().create_timer(1.0).timeout
+	win.play("showTempoTotal")
+	await get_tree().create_timer(1.0).timeout
+	win.play("showVelocidade")
+	await get_tree().create_timer(1.0).timeout
+	win.play("buttonsShow")
+	await get_tree().create_timer(1.0).timeout
 	print("finalizado")
