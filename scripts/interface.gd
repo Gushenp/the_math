@@ -7,7 +7,7 @@ extends Control
 @onready var counter = $head/MarginContainer/VBoxContainer/AspectRatioContainer/MarginContainer/counter
 @onready var timer = $head/MarginContainer/VBoxContainer/AspectRatioContainer2/timer
 @onready var timerNum = $head/MarginContainer/VBoxContainer/AspectRatioContainer2/timerNumber
-@onready var quantidade = 1 #Dados.quantidade
+@onready var quantidade = Dados.quantidade
 @onready var main = $main
 @onready var head = $head
 @onready var numberintro = $numberAnimation
@@ -17,9 +17,13 @@ extends Control
 @onready var audioTecla = $key
 @onready var correctAudio = $correct
 
-var IDCampo1 = 1 #Dados.campo1ID
-var IDcampo2 = 1 #Dados.campo2ID
-var IDoperacao = 0# Dados.operacaoID
+@onready var scoreQuantidade = $Win/VBoxContainer/Quantidade/Label
+@onready var scoreTempoTotal = $Win/VBoxContainer/TempoTotal/VBoxContainer/Label2
+@onready var scorevelocidade = $Win/VBoxContainer/Velocidade/VBoxContainer/Label2
+
+var IDCampo1 = Dados.campo1ID
+var IDcampo2 = Dados.campo2ID
+var IDoperacao = Dados.operacaoID
 func _ready() -> void:
 	start()
 
@@ -172,21 +176,33 @@ func finalizarJogo():
 	jogoFinalizado = true
 	startTimer = false
 	numberintro.play("greenNumber")
-	$Win/VBoxContainer/Quantidade/Label.text = str(contador) + "/" + str(quantidade)
-	await get_tree().create_timer(1.0).timeout
+	scoreQuantidade.text = str(contador) + "/" + str(quantidade)
+	scoreTempoTotal.text = str(contador) + "/" + str(quantidade)
+	#await get_tree().create_timer(1.0).timeout
 	$win.play()
 	await get_tree().create_timer(2.0).timeout
 	numberintro.play("outNumber")
 	headOut.play("placarOut")
-	await get_tree().create_timer(2.0).timeout
+	scoreTempoTotal.text = str(temp_inicio_sessao)
+	await get_tree().create_timer(1.0).timeout
 	win.play("showSessao")
 	await get_tree().create_timer(1.0).timeout
 	win.play("showQuant")
-	await get_tree().create_timer(1.0).timeout
+	scoreQuantidade.text = str(contador) + "/" + str(quantidade)
+	await get_tree().create_timer(0.5).timeout
 	win.play("showTempoTotal")
-	await get_tree().create_timer(1.0).timeout
+	await get_tree().create_timer(0.5).timeout
 	win.play("showVelocidade")
-	await get_tree().create_timer(1.0).timeout
+	await get_tree().create_timer(0.5).timeout
 	win.play("buttonsShow")
 	await get_tree().create_timer(1.0).timeout
 	print("finalizado")
+
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://objetos/Jogo.tscn")
+	pass 
+
+
+func _on_button_2_pressed() -> void:
+	get_tree().change_scene_to_file("res://objetos/inicio.tscn")
+	pass 

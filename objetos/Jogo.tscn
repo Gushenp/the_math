@@ -951,10 +951,10 @@ stream = ExtResource("4_d8qyl")
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
-anchor_bottom = 0.11100001
+anchor_bottom = 0.215
 offset_left = 1.0
 offset_right = 1.0
-offset_bottom = -16.928009
+offset_bottom = -84.32001
 size_flags_vertical = 0
 alignment = 1
 metadata/_edit_use_anchors_ = true
@@ -1069,6 +1069,21 @@ stream = ExtResource("5_mjlty")
 
 [node name="Win" parent="." unique_id=874449536 instance=ExtResource("6_v5f50")]
 layout_mode = 1
+
+[node name="VBoxContainer" parent="Win" index="0" unique_id=906782629]
+anchors_preset = -1
+anchor_left = 0.374
+anchor_top = 0.060000002
+anchor_right = 0.634
+anchor_bottom = 0.6
+offset_left = -0.34802246
+offset_top = 0.11999893
+offset_right = 0.13201904
+offset_bottom = 0.19998169
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Win/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Win/Button2" to="." method="_on_button_2_pressed"]
 
 [editable path="AnimacaoContagem"]
 [editable path="Win"]
