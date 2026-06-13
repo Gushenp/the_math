@@ -109,6 +109,14 @@ offset_right = 660.0
 offset_bottom = 136.0
 text = "+"
 
+[node name="Titulo" type="AspectRatioContainer" parent="." unique_id=743703368]
+layout_mode = 1
+offset_right = 1152.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Titulo" unique_id=1207327375]
+layout_mode = 2
+
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
 [connection signal="pressed" from="ButtonMenos" to="." method="_on_button_menos_pressed"]
 [connection signal="pressed" from="ButtonMais" to="." method="_on_button_mais_pressed"]

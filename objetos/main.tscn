@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://bpge0sfcbays2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qufb8"]
+font_size = 42
+
+[node name="main" type="Control" unique_id=1078488356]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="head" type="AspectRatioContainer" parent="." unique_id=1342418707]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 85.0
+grow_horizontal = 2
+alignment_horizontal = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="head" unique_id=1156763510]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="head/MarginContainer" unique_id=21413891]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="MainTitle" type="Label" parent="head/MarginContainer/VBoxContainer" unique_id=967619182]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "NUMINA"
+label_settings = SubResource("LabelSettings_qufb8")
+
+[node name="MarginContainer" type="MarginContainer" parent="head/MarginContainer/VBoxContainer" unique_id=1243802105]
+layout_mode = 2
+theme_override_constants/margin_top = -9
+
+[node name="SubTitle" type="Label" parent="head/MarginContainer/VBoxContainer/MarginContainer" unique_id=2063894082]
+layout_mode = 2
+text = "MATH SPEED"
+
+[node name="GameMods" type="AspectRatioContainer" parent="." unique_id=573619271]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -281.5
+offset_top = -239.0
+offset_right = 281.5
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="GameMods" unique_id=556291308]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "MODOS DE JOGO"
+
+[node name="Button" type="Button" parent="GameMods" unique_id=591261481]
+layout_mode = 2
